@@ -21,9 +21,7 @@ public class Main {
             if (x < A[i + 1] && x > A[i - 1]) break;
         }
 
-        if (x == Integer.MAX_VALUE) {
-            System.out.println("NO");
-        } else {
+        if (x < A[i + 1] && x > A[i - 1]) {
             A[i] = x;
             for (j = 0; j < A.length - 1; j++) {
                 System.out.print(A[j] + " ");
@@ -31,6 +29,8 @@ public class Main {
             if (j < A.length) {
                 System.out.println(A[j]);
             }
+        } else {
+            System.out.println("NO");
         }
     }
 
